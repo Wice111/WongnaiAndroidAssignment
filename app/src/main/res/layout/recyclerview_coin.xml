@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="coin"
+            type="com.example.wongnaiandroidassignment.ui.main.CoinsResponse.Data.Coin" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:src="@drawable/ic_bitcoin_btc_3">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/textgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_82sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/_40sdp">
+
+            <TextView
+                android:id="@+id/relate_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:text="@{coin.name}"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phone_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:maxLines="3"
+                android:text="@{coin.description}"
+                android:textColor="#9E9E9E"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_below="@+id/textgroup"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:src="@drawable/ic_rectangle_1">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+</layout>
