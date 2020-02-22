@@ -25,7 +25,6 @@
             android:layout_alignTop="@+id/background"
             android:layout_alignLeft="@+id/background"
             android:layout_alignRight="@+id/background"
-            android:layout_marginTop=""
             app:srcCompat="@drawable/ic_bitcoin"></ImageView>
     </RelativeLayout>
 
