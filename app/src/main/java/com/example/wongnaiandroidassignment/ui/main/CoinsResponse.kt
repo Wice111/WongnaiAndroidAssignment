@@ -1,5 +1,7 @@
 package com.example.wongnaiandroidassignment.ui.main
 
+/* Response data structure */
+
 data class CoinsResponse(
     val `data`: Data,
     val status: String

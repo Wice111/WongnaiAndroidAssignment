@@ -12,9 +12,10 @@ class CoinsAdapter (
     private val coinsResponse : CoinsResponse
 ): RecyclerView.Adapter<CoinsAdapter.CoinsViewHolder>(){
 
-
+    /* Get item count from response */
     override fun getItemCount() = coinsResponse.data.coins.size
 
+    /* Create view holder */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         CoinsViewHolder(
             DataBindingUtil.inflate(
@@ -28,6 +29,7 @@ class CoinsAdapter (
     override fun onBindViewHolder(holder: CoinsViewHolder, position: Int) {
         holder.recyclerviewcoinBinding.coin = coinsResponse.data.coins[position]
     }
+
     inner class CoinsViewHolder(
         val recyclerviewcoinBinding : RecyclerviewCoinBinding
     ) : RecyclerView.ViewHolder(recyclerviewcoinBinding.root)

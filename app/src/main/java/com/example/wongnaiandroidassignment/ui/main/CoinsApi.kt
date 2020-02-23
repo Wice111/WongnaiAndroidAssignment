@@ -10,6 +10,7 @@ interface CoinsApi {
     @GET("coins")
     suspend fun getCoins(): Response<CoinsResponse>
 
+    /* Use Retrofit to build api */
     companion object {
         operator fun invoke(): CoinsApi {
             return Retrofit.Builder()
